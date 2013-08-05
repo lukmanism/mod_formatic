@@ -14,8 +14,6 @@
 	<description>FORMATICMOD</description>
     <languages>
 	    <language tag="en-GB">language/en-GB/en-GB.mod_formatic.ini</language>
-		<language tag="fr-FR">language/fr-FR/fr-FR.mod_formatic.ini</language>
-		<language tag="de-DE">language/de-DE/de-DE.mod_formatic.ini</language>
     </languages>
 
 	<files>
@@ -27,332 +25,59 @@
 		<filename>mod_formatic.xml</filename>
 
 	</files>
-
 		<config>
 			<fields name="params">
-				<fieldset name="HTML">
-
-
-		        <field name="codeeditor" type="textarea"  filter="raw" default="" label="FM_HTML" description="FM_HTML_DESC" cols="50" rows="12">
-		        </field>
-
-		        <field name="textareause" type="list" default="1" label="FM_TEXT_AREA_USE_LABEL" description="FM_TEXT_AREA_USE_LABEL">
-		            <option value="1">FM_YES</option>
-		            <option value="2">FM_NO</option>
-		        </field>
-
-
-
-			</fieldset>
-
-			<fieldset name="PHP">
-
- 				<field name="phpcode" type="textarea"  filter="raw" default="" label="FM_PLACE_CODE_LABEL" description="FM_PLACE_CODE_DESC" cols="50" rows="12">
-		        </field>
-
-		        <field name="phpuse" type="list" default="1" label="PHPUSE" description="PHPUSE_DESC">
-		            <option value="1">FM_YES</option>
-		            <option value="2">FM_NO</option>
-		        </field>
-
-
-		        </fieldset>
-
-		     <fieldset name="SCRIPTS">
-
-
-
-			<field name="script" type="textarea" filter="raw" default="" label="CUSTOM_TAGS_LABEL" rows="12"  cols="50" description="CUSTOM_TAGS_DESC" >
-			</field>
-
-			<field name="scriptuse" type="list" default="1" label="FM_SCRIPT" description="FM_SCRIPT">
-		            <option value="1">FM_YES</option>
-		            <option value="2">FM_NO</option>
-
-		    </field>
-
-
-			</fieldset>
-			<fieldset name="ARTICLE">
-
-			<field name="itemid" type="sql" default="a" label="FM_ARTICLE_LABEL" query="SELECT id, title FROM #__content" key_field="id" value_field="title" > <option value="a">FM_SELECT</option></field>
-
-		        <field name="contenttitleuse" type="list" default="1" label="FM_ARTICLE_TITLE" description="FM_ARTICLE_TITLE">
-		            <option value="1">FM_YES</option>
-		            <option value="2">FM_NO</option>
-		        </field>
-
-		        <field name="contentuse" type="list" default="1" label="FM_ARTICLE_CONTENT" description="FM_ARTICLE_CONTENT">
-		            <option value="1">FM_YES</option>
-		            <option value="2">FM_NO</option>
-
-		        </field>
-
-
-
-			</fieldset>
-
-			<fieldset name="ORDER">
-
-
-
-		        <field name="content1" type="list" default="1" label="FM_SELECTION1" description="FM_SELECTION1">
-
-		            <option value="0">FM_SELECT</option>
-		            <option value="1">FM_HTML_CONTENT</option>
-		            <option value="2">FM_PHP_CONTENT</option>
-		            <option value="3">FM_ARTICLE_CONTENT</option>
-
-
-		        </field>
-
-		        <field name="content2" type="list" default="2" label="FM_SELECTION2" description="FM_SELECTION2">
-
-		            <option value="0">FM_SELECT</option>
-		            <option value="1">FM_HTML_CONTENT</option>
-		            <option value="2">FM_PHP_CONTENT</option>
-		            <option value="3">FM_ARTICLE_CONTENT</option>
-
-
-		        </field>
-		        <field name="content3" type="list" default="3" label="FM_SELECTION3" description="FM_SELECTION3">
-
-		            <option value="0">FM_SELECT</option>
-		            <option value="1">FM_HTML_CONTENT</option>
-		            <option value="2">FM_PHP_CONTENT</option>
-		            <option value="3">FM_ARTICLE_CONTENT</option>
-
-
-		        </field>
-
-
-
-			</fieldset>
-
-
-			<fieldset name="FM_GRAPHICS">
-
-			<field name="graphics" type="list" default="2" label="FM_GRAPHICS_LABEL" description="FM_GRAPHICS_DESC">
-		            <option value="1">FM_GRAPHICS_USE_OPT1</option>
-		            <option value="2">FM_GRAPHICS_USE_OPT2</option>
-		        </field>
-
-		        <field name="keycolour" type="list" default="grey" label="FM_MODULE_KEY_COLOUR" description="FM_MODULE_KEY_COLOUR_DESC">
-
-		        <option value="grey">FM_KEYCOLOUR_OPT7</option>
-		        <option value="red">FM_KEYCOLOUR_OPT1</option>
-		        <option value="orange">FM_KEYCOLOUR_OPT2</option>
-		        <option value="yellow">FM_KEYCOLOUR_OPT3</option>
-		        <option value="green">FM_KEYCOLOUR_OPT4</option>
-		        <option value="blue">FM_KEYCOLOUR_OPT5</option>
-		        <option value="purple">FM_KEYCOLOUR_OPT6</option>
-
-		    </field>
-
-		    <field name="surroundstyle" type="list" default="06roundcorner5" label="FM_SURROUNDSTYLE_LABEL" description="FM_SURROUNDSTYLE_DESC">
-
-		        <option value="00none0">FM_SURROUNDSTYLE_OPTA</option>
-		        <option value="custom">FM_SURROUNDSTYLE_OPTB</option>
-
-		        <option value=""> ---Integral------------- </option>
-
-		        <option value="06plain5">FM_SURROUNDSTYLE_OPT1</option>
-		        <option value="06roundcorner5">FM_SURROUNDSTYLE_OPT2</option>
-		        <option value="06bevel5">FM_SURROUNDSTYLE_OPT3</option>
-		        <option value="06double5">FM_SURROUNDSTYLE_OPT4</option>
-		        <option value="06tubular5">FM_SURROUNDSTYLE_OPT5</option>
-		        <option value="06shadow5">FM_SURROUNDSTYLE_OPT6</option>
-
-		        <option value=""> ---Media Addon------------ </option>
-
-		        <option value="20curve11">FM_PREMSURROUNDSTYLE_OPT39</option>
-		        <option value="16curve11">FM_PREMSURROUNDSTYLE_OPT1</option>
-		        <option value="12curve11">FM_PREMSURROUNDSTYLE_OPT20</option>
-		        <option value="20deco1">FM_PREMSURROUNDSTYLE_OPT40</option>
-		        <option value="16deco1">FM_PREMSURROUNDSTYLE_OPT2</option>
-		        <option value="20glass21">FM_PREMSURROUNDSTYLE_OPT41</option>
-		        <option value="16glass21">FM_PREMSURROUNDSTYLE_OPT3</option>
-		        <option value="12glass21">FM_PREMSURROUNDSTYLE_OPT22</option>
-		        <option value="20glass31">FM_PREMSURROUNDSTYLE_OPT42</option>
-		        <option value="16glass31">FM_PREMSURROUNDSTYLE_OPT4</option>
-		        <option value="12glass31">FM_PREMSURROUNDSTYLE_OPT23</option>
-		        <option value="20picframes1">FM_PREMSURROUNDSTYLE_OPT43</option>
-		        <option value="16picframes1">FM_PREMSURROUNDSTYLE_OPT5</option>
-		        <option value="12picframes1">FM_PREMSURROUNDSTYLE_OPT24</option>
-		        <option value="20plain1">FM_PREMSURROUNDSTYLE_OPT44</option>
-		        <option value="16plain1">FM_PREMSURROUNDSTYLE_OPT6</option>
-		        <option value="12plain1">FM_PREMSURROUNDSTYLE_OPT25</option>
-		        <option value="20plain-curve1">FM_PREMSURROUNDSTYLE_OPT45</option>
-		        <option value="16plain-curve1">FM_PREMSURROUNDSTYLE_OPT7</option>
-		        <option value="12plain-curve1">FM_PREMSURROUNDSTYLE_OPT26</option>
-		        <option value="20plastick1">FM_PREMSURROUNDSTYLE_OPT46</option>
-		        <option value="16plastick1">FM_PREMSURROUNDSTYLE_OPT8</option>
-		        <option value="12plastick1">FM_PREMSURROUNDSTYLE_OPT27</option>
-		        <option value="20plastick21">FM_PREMSURROUNDSTYLE_OPT47</option>
-		        <option value="16plastick21">FM_PREMSURROUNDSTYLE_OPT9</option>
-		        <option value="12plastick21">FM_PREMSURROUNDSTYLE_OPT28</option>
-		        <option value="20roman3">FM_PREMSURROUNDSTYLE_OPT48</option>
-		        <option value="16roman2">FM_PREMSURROUNDSTYLE_OPT10</option>
-		        <option value="12roman2">FM_PREMSURROUNDSTYLE_OPT29</option>
-		        <option value="20sharp-fade3">FM_PREMSURROUNDSTYLE_OPT49</option>
-		        <option value="16sharp-fade2">FM_PREMSURROUNDSTYLE_OPT11</option>
-		        <option value="12sharp-fade2">FM_PREMSURROUNDSTYLE_OPT30</option>
-		        <option value="20soft-fade3">FM_PREMSURROUNDSTYLE_OPT50</option>
-
-		        <option value="16soft-fade3">FM_PREMSURROUNDSTYLE_OPT12</option>
-		        <option value="12soft-fade2">FM_PREMSURROUNDSTYLE_OPT31</option>
-		        <option value="20speckled3">FM_PREMSURROUNDSTYLE_OPT51</option>
-		        <option value="16speckled3">FM_PREMSURROUNDSTYLE_OPT13</option>
-		        <option value="12speckled2">FM_PREMSURROUNDSTYLE_OPT32</option>
-		        <option value="20speckled23">FM_PREMSURROUNDSTYLE_OPT52</option>
-		        <option value="16speckled23">FM_PREMSURROUNDSTYLE_OPT14</option>
-		        <option value="12speckled22">FM_PREMSURROUNDSTYLE_OPT33</option>
-
-		        <option value="20tubular3">FM_PREMSURROUNDSTYLE_OPT53</option>
-		        <option value="16tubular3">FM_PREMSURROUNDSTYLE_OPT15</option>
-		        <option value="12tubular2">FM_PREMSURROUNDSTYLE_OPT34</option>
-		        <option value="32hacked3">FM_PREMSURROUNDSTYLE_OPT54</option>
-
-		        <option value="16contour2">FM_PREMSURROUNDSTYLE_OPT17</option>
-		        <option value="12contour2">FM_PREMSURROUNDSTYLE_OPT36</option>
-
-		        <option value="16contour22">FM_PREMSURROUNDSTYLE_OPT18</option>
-		        <option value="12contour22">FM_PREMSURROUNDSTYLE_OPT37</option>
-
-		        <option value="20soft3">FM_PREMSURROUNDSTYLE_OPT58</option>
-		        <option value="20webtwo3">FM_PREMSURROUNDSTYLE_OPT59</option>
-
-		    </field>
-
-
-		    <field name="bgpattern" type="list" default="herring" label="FM_BG_PATTERN" description="FM_BG_PATTERN_DESC">
-				<option value="none0">FM_BG_PATTERN_OPTA</option>
-		        <option value="custom">FM_BG_PATTERN_OPTB</option>
-
-		        <option value=""> ---Integral------------- </option>
-		        <option value="herring">FM_BG_PATTERN_OPT1</option>
-		        <option value="twisted">FM_BG_PATTERN_OPT2</option>
-		        <option value="metal">FM_BG_PATTERN_OPT3</option>
-		        <option value="mosaic">FM_BG_PATTERN_OPT4</option>
-		        <option value="mesh">FM_BG_PATTERN_OPT7</option>
-		        <option value="snowflake2">FM_BG_PATTERN_OPT9</option>
-		        <option value="pipes">FM_BG_PATTERN_OPT10</option>
-		        <option value="linen">FM_BG_PATTERN_OPT11</option>
-		        <option value="bgstripe18">FM_BG_PATTERN_OPT12</option>
-		        <option value="marble">FM_BG_PATTERN_OPT13</option>
-
-		        <option value=""> ---Media Addon------------- </option>
-
-		        <option value="dashes">FM_BG_PATTERN_OPT14</option>
-		        <option value="bubbles">FM_BG_PATTERN_OPT15</option>
-		        <option value="metalherring">FM_BG_PATTERN_OPT16</option>
-		        <option value="brushed">FM_BG_PATTERN_OPT17</option>
-		        <option value="canvas">FM_BG_PATTERN_OPT18</option>
-		        <option value="cube">FM_BG_PATTERN_OPT19</option>
-		        <option value="diamond">FM_BG_PATTERN_OPT20</option>
-		        <option value="hex2">FM_BG_PATTERN_OPT21</option>
-		        <option value="crossword">FM_BG_PATTERN_OPT22</option>
-		        <option value="crossword2">FM_BG_PATTERN_OPT23</option>
-		        <option value="brick">FM_BG_PATTERN_OPT24</option>
-		        <option value="barcode2">FM_BG_PATTERN_OPT25</option>
-		        <option value="square2">FM_BG_PATTERN_OPT26</option>
-
-
-		        <option value="halftone">FM_BG_PATTERN_OPT27</option>
-		        <option value="grunge2">FM_BG_PATTERN_OPT28</option>
-		        <option value="dot4">FM_BG_PATTERN_OPT29</option>
-		        <option value="enamel">FM_BG_PATTERN_OPT30</option>
-		        <option value="finestripe">FM_BG_PATTERN_OPT31</option>
-		        <option value="vertical">FM_BG_PATTERN_OPT32</option>
-		        <option value="horizontal">FM_BG_PATTERN_OPT33</option>
-		    </field>
-
-		    <field name="bgautocolour" type="list" default="1" label="FM_BG_AUTOCOLOUR_LABEL" description="FM_BG_AUTOCOLOUR_DESC">
-		        <option value="1">FM_BG_AUTOCOLOUR_OPT1</option>
-		        <option value="2">FM_BG_AUTOCOLOUR_OPT2</option>
-		    </field>
-
-		    <field name="bgcustomcolour" type="text" default="#ffffff" label="FM_BG_CUSTOMCOLOUR_LABEL" description="FM_BG_CUSTOMCOLOUR_DESC"/>
-
-		     <field name="colour2" type="text" default="" label="FM_MODULE_INTERIOR_COLOUR_BACKGROUND_LABEL" description="FM_MODULE_INTERIOR_COLOUR_BACKGROUND_DESC">
-		     </field>
-
-
-		    	<field name="custompx" label="FM_CUSTOM_LABEL" description="FM_CUSTOM_DESC" type="text" default="20"></field>
-			</fieldset>
-
-
-			<fieldset name="FM_ADMIN">
-					<field name="spacer1" type="radio" label="FM_STYLES_SPACER" />
-
-		        <field name="margin-leftmodule" type="text" default="" label="FM_LEFT_MARGIN_LABEL" description="FM_LEFT_MARGIN_DESC">
-		        </field>
-
-
-		        <field name="paddingleft" type="text" default="" label="FM_PADDING_LEFT" description="FM_PADDING_LEFT_DESC">
-		        </field>
-
-		        <field name="paddingright" type="text" default="" label="FM_PADDING_RIGHT" description="FM_PADDING_RIGHT_DESC">
-		        </field>
-
-		        <field name="paddingtop" type="text" default="" label="FM_PADDING_TOP" description="FM_PADDING_TOP_DESC">
-		        </field>
-
-		        <field name="paddingbottom" type="text" default="" label="FM_PADDING_BOTTOM" description="FM_PADDING_BOTTOM_DESC">
-		        </field>
-
-		        <field name="margin-top" type="text" default="" label="FM_TOP_MARGIN" description="FM_TOP_MARGIN_DESC">
-		        </field>
-
-		        <field name="margin-bottom" type="text" default="" label="FM_BOTTOM_MARGIN" description="FM_BOTTOM_MARGIN_DESC">
-		        </field>
-
-
-		        <field name="width" type="text" default="100" label="FM_WIDTH" description="FM_MODULE_WIDTH">
-		        </field>
-
-		        <field name="widthunit" type="list" default="%" label="FM_WIDTH_UNIT" description="FM_WIDTH_UNIT">
-			   <option value="px">FM_WIDTH_UNIT_OPT1</option>
-		           <option value="%">FM_WIDTH_UNIT_OPT2</option>
-		        </field>
-
-
-		        <field name="colour1" type="text" default="" label="FM_MODULE_COLOUR_BACKGROUND" description="FM_MODULE_COLOUR_BACKGROUND_DESC">
-		        </field>
-
-
-			<field name="spacer2" type="radio" label="FM_ADMIN_SPACER" />
-		        <field name="moduleclass_sfx" type="text" default="" label="FM_MODULE_CLASS_SUFFIX_LABEL" description="FM_MODULE_CLASS_SUFFIX_DESC" >
+			<fieldset name="Forms" label="Forms">		        
+	            <field
+	                name="formid"
+	                query="SELECT `name`, `id` FROM #__formatic WHERE state = 1 ORDER BY `name`"
+	                type="sql"
+	                key_field="id" 
+	                value_field="name"
+	                label="Select Form"
+	                require="true"
+	                description="JGLOBAL_SHOW_TITLE_DESC">
+            </field>
+				<field
+					name="style"
+					type="list"
+					default="default"
+					label="Style"
+					description="">
+					<option value="default">Default</option>
+					<option value="flat">Flat</option>
 				</field>
-
-
-				<field name="modno_bm" type="list" default="0" label="FM_MODNO_LABEL" description="FM_MODNO_DESC">
-							
-							<option value="0">FM_AUTO_ID</option>
-							<option value="1BM">1</option>
-		            		<option value="2BM">2</option>
-		            		<option value="3BM">3</option>
-		            		<option value="4BM">4</option>
-		            		<option value="5BM">5</option>
-		            		<option value="6BM">6</option>
-		            		<option value="7BM">7</option>
-		            		<option value="8BM">8</option>
-		            		<option value="9BM">9</option>
-		            		<option value="10BM">10</option>
-		            		<option value="11BM">11</option>
-		            		<option value="12BM">12</option>
-		            		<option value="13BM">13</option>
-		            		<option value="14BM">14</option>
-		            		<option value="15BM">15</option>
-		            		<option value="16BM">16</option>
-		            		<option value="17BM">17</option>
-		            		<option value="18BM">18</option>
-		            		<option value="19BM">19</option>
-		            		<option value="20BM">20</option>
-		        </field>
-
-
-
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>

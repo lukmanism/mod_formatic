@@ -1,0 +1,34 @@
+.formatic {
+	padding: 10px;
+}
+.rowmatic {
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.rowmatic span{
+	display: block;
+	margin-left: 25%;
+}
+.rowmatic label {
+	width: 25%;
+	display: inline-block;
+}
+.rowmatic label {
+	width: 25%;
+	display: inline-block;
+}
+.rowmatic span label {
+	width: auto;
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+.rowmatic span input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    *overflow: hidden;
+}

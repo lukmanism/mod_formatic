@@ -1,0 +1,70 @@
+.formatic {
+	padding: 10px;
+}
+.formatic * {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+}
+.rowmatic {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	position: relative;
+}
+.rowmatic label {
+	width: 25%;
+	display: inline-block;
+}
+.rowmatic span label {
+	width: auto;
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+.rowmatic span input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    *overflow: hidden;
+}
+.rowmatic input,
+.rowmatic textarea,
+.rowmatic select {
+	border: 1px solid #ACAEA2;
+	line-height: inherit;
+	padding: 2px;
+}
+.rowmatic input {
+	height: 18px;
+}
+input.error{
+	background-color: #FFBBBB;
+}
+.error {
+	margin: 0px;
+}
+label.error{
+	position: absolute;
+	top: 0;
+	left: 50%;
+	font-size: 80%;
+	line-height: 28px;
+}
+.rowmatic input[type=submit]{
+	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 20px 0 20px;
+	margin-left: 25%;
+	margin-top: 20px;
+}
+.rowmatic input[type=submit]:hover{
+	background-color: #8C8F7C;
+}
+.rowmatic span{
+	display: block;
+	margin-left: 25%;
+}
